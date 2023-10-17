@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // картины
+        const images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWXdwzeMxcB7Agmfhl3OSlT99oAiod9nM1A&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaE6oTzwDjb3qB488_MMUEuT-y5yZ49fgjw&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP-u1VwJQsXWfjyc2gSDDT-fXdCnk2SxtSxA&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNZOE93tnu_vfmsO6h0PcXVnEMxetFnXKF70mBqYskPuk2zSPB0bVTkQgxtzCqieY7V0s&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwsPnAG_Ckk4Qi9iq_vANCI76nlcSmVcP4q4jLQdQ50ipJSfqzdxwa-g5O2p9lXGVFs9E&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLXhX-67KqOYanp5wl5g7sV_iGtBsrc_OFTg&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV25krb39Fnbs3NuhaAWNzCP7cDze8L8xog&usqp=CAU",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCkvvzbBd_kprnQT_ejZ_3K0JALSls_AS6QA&usqp=CAU",
+            ];
+
+for (let i = 0; i < 8; i++) {
+  const image = document.createElement("img");
+  image.src = images[Math.floor(Math.random() * images.length)];
+  image.style.width = "100px";
+  image.style.height = "100px";
+  document.body.appendChild(image);
+}
+
+
+
+
+
+
+// Цикл for
+let resultFor = 0;
+for (let i = 1; i <= 10; i++) {
+  resultFor += i;
+}
+document.write('<ul><li>Результат цикла for: ' + resultFor + '</li></ul>');
+
+
+
+// Цикл while
+let resultWhile = 0;
+let j = 1;
+while (j <= 10) {
+  resultWhile += j;
+  j++;
+}
+document.write('<ul><li>Результат цикла while: ' + resultWhile + '</li></ul>');
+
+
+// Цикл do...while
+let resultDoWhile = 0;
+let k = 1;
+do {
+  resultDoWhile += k;
+  k++;
+} while (k <= 10);
+document.write('<ul><li>Результат цикла do...while: ' + resultDoWhile + '</li></ul>');
+
+
+
+
+// пирамида из *
+function drawTriangle() {
+  for (let i = 1; i <= 7; i++) {
+    document.write("*".repeat(i) + "<br>");
+  }
+}
+
+drawTriangle();
+
+
+
+
+
+
+
+// массив
+const array = [2, 3, 4, 5];
+let product = 1; 
+
+for (let i = 0; i < array.length; i++) {
+    product *= array[i];
+}
+
+document.write('Произведение элементов массива: ' + product + '<br>');
+
+
+
+
+// второй массив
+const arrara = [1, 2, 5, 9, 4, 13, 4, 10];
+const targetValue = 4;
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] === targetValue) {
+        document.write('Есть!');
+        break; // Выходим из цикла, если элемент найден
+    }
+}
+
+
+    </script>
+
+<div id="imageContainer">
+</div>
+</body>
+</html>
